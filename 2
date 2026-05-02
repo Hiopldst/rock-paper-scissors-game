@@ -1,0 +1,22 @@
+import random
+
+playing = True
+while playing:
+
+   user_choice = input("камень , ножницы или бумага? " )
+   computer_choice = random.choice(["камень", "ножницы", "бумага"])
+
+   if user_choice == computer_choice:
+     print("ничья")
+   elif user_choice == "камень" and computer_choice == "ножницы":
+     print("победа")
+   elif user_choice == "бумага" and computer_choice == "камень":
+     print("победа")
+   elif user_choice == "ножницы" and computer_choice == "бумага":
+     print("победа")
+   else:
+      print("проигрыш")
+
+   answer = input("\nеще раз? (да/нет): ")
+   if answer.lower().strip() == "нет":
+     playing = False
